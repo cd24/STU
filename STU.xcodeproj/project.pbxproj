@@ -16,6 +16,9 @@
 		39718EF62443F3EF002CEE3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39718EF42443F3EF002CEE3C /* LaunchScreen.storyboard */; };
 		39718F012443F3F0002CEE3C /* STUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39718F002443F3F0002CEE3C /* STUTests.swift */; };
 		39718F0C2443F3F0002CEE3C /* STUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39718F0B2443F3F0002CEE3C /* STUUITests.swift */; };
+		525E226E2454F647006C0711 /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
+		525E22732454F647006C0711 /* STUCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E22722454F647006C0711 /* STUCoreTests.swift */; };
+		525E22752454F647006C0711 /* STUCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 525E22672454F647006C0711 /* STUCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +35,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 39718EE22443F3DD002CEE3C;
 			remoteInfo = STU;
+		};
+		525E226F2454F647006C0711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39718EDB2443F3DD002CEE3C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 525E22642454F647006C0711;
+			remoteInfo = STUCore;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +61,12 @@
 		39718F072443F3F0002CEE3C /* STUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39718F0B2443F3F0002CEE3C /* STUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUUITests.swift; sourceTree = "<group>"; };
 		39718F0D2443F3F0002CEE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525E22652454F647006C0711 /* STUCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STUCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		525E22672454F647006C0711 /* STUCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STUCore.h; sourceTree = "<group>"; };
+		525E22682454F647006C0711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		525E226D2454F647006C0711 /* STUCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STUCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		525E22722454F647006C0711 /* STUCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUCoreTests.swift; sourceTree = "<group>"; };
+		525E22742454F647006C0711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		525E22622454F647006C0711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		525E226A2454F647006C0711 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525E226E2454F647006C0711 /* STUCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -84,6 +115,8 @@
 				39718EE52443F3DD002CEE3C /* STU */,
 				39718EFF2443F3F0002CEE3C /* STUTests */,
 				39718F0A2443F3F0002CEE3C /* STUUITests */,
+				525E22662454F647006C0711 /* STUCore */,
+				525E22712454F647006C0711 /* STUCoreTests */,
 				39718EE42443F3DD002CEE3C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +127,8 @@
 				39718EE32443F3DD002CEE3C /* STU.app */,
 				39718EFC2443F3F0002CEE3C /* STUTests.xctest */,
 				39718F072443F3F0002CEE3C /* STUUITests.xctest */,
+				525E22652454F647006C0711 /* STUCore.framework */,
+				525E226D2454F647006C0711 /* STUCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,7 +174,36 @@
 			path = STUUITests;
 			sourceTree = "<group>";
 		};
+		525E22662454F647006C0711 /* STUCore */ = {
+			isa = PBXGroup;
+			children = (
+				525E22672454F647006C0711 /* STUCore.h */,
+				525E22682454F647006C0711 /* Info.plist */,
+			);
+			path = STUCore;
+			sourceTree = "<group>";
+		};
+		525E22712454F647006C0711 /* STUCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				525E22722454F647006C0711 /* STUCoreTests.swift */,
+				525E22742454F647006C0711 /* Info.plist */,
+			);
+			path = STUCoreTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		525E22602454F647006C0711 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525E22752454F647006C0711 /* STUCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		39718EE22443F3DD002CEE3C /* STU */ = {
@@ -195,13 +259,49 @@
 			productReference = 39718F072443F3F0002CEE3C /* STUUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		525E22642454F647006C0711 /* STUCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 525E227A2454F647006C0711 /* Build configuration list for PBXNativeTarget "STUCore" */;
+			buildPhases = (
+				525E22602454F647006C0711 /* Headers */,
+				525E22612454F647006C0711 /* Sources */,
+				525E22622454F647006C0711 /* Frameworks */,
+				525E22632454F647006C0711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = STUCore;
+			productName = STUCore;
+			productReference = 525E22652454F647006C0711 /* STUCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		525E226C2454F647006C0711 /* STUCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 525E227B2454F647006C0711 /* Build configuration list for PBXNativeTarget "STUCoreTests" */;
+			buildPhases = (
+				525E22692454F647006C0711 /* Sources */,
+				525E226A2454F647006C0711 /* Frameworks */,
+				525E226B2454F647006C0711 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				525E22702454F647006C0711 /* PBXTargetDependency */,
+			);
+			name = STUCoreTests;
+			productName = STUCoreTests;
+			productReference = 525E226D2454F647006C0711 /* STUCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		39718EDB2443F3DD002CEE3C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "John McAvey";
 				TargetAttributes = {
@@ -215,6 +315,12 @@
 					39718F062443F3F0002CEE3C = {
 						CreatedOnToolsVersion = 11.3.1;
 						TestTargetID = 39718EE22443F3DD002CEE3C;
+					};
+					525E22642454F647006C0711 = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					525E226C2454F647006C0711 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
@@ -234,6 +340,8 @@
 				39718EE22443F3DD002CEE3C /* STU */,
 				39718EFB2443F3F0002CEE3C /* STUTests */,
 				39718F062443F3F0002CEE3C /* STUUITests */,
+				525E22642454F647006C0711 /* STUCore */,
+				525E226C2454F647006C0711 /* STUCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +365,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		39718F052443F3F0002CEE3C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		525E22632454F647006C0711 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		525E226B2454F647006C0711 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,6 +415,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		525E22612454F647006C0711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		525E22692454F647006C0711 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				525E22732454F647006C0711 /* STUCoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -305,6 +442,11 @@
 			isa = PBXTargetDependency;
 			target = 39718EE22443F3DD002CEE3C /* STU */;
 			targetProxy = 39718F082443F3F0002CEE3C /* PBXContainerItemProxy */;
+		};
+		525E22702454F647006C0711 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 525E22642454F647006C0711 /* STUCore */;
+			targetProxy = 525E226F2454F647006C0711 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -440,14 +582,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STU/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VKP38H23M;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = STU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.john.STU;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -460,14 +603,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"STU/Preview Content\"";
-				DEVELOPMENT_TEAM = 6VKP38H23M;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = STU/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.john.STU;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -558,6 +702,109 @@
 			};
 			name = Release;
 		};
+		525E22762454F647006C0711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STUCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator iphoneos macosx iphonesimulator appletvos watchos watchsimulator";
+				SUPPORTS_TEXT_BASED_API = YES;
+				SWIFT_VERSION = 5.0;
+				TAPI_VERIFY_MODE = Pedantic;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		525E22772454F647006C0711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = fast;
+				INFOPLIST_FILE = STUCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "appletvsimulator iphoneos macosx iphonesimulator appletvos watchos watchsimulator";
+				SUPPORTS_TEXT_BASED_API = YES;
+				SWIFT_VERSION = 5.0;
+				TAPI_VERIFY_MODE = Pedantic;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		525E22782454F647006C0711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
+				INFOPLIST_FILE = STUCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		525E22792454F647006C0711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VPWANFCTRJ;
+				INFOPLIST_FILE = STUCoreTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +840,24 @@
 			buildConfigurations = (
 				39718F172443F3F0002CEE3C /* Debug */,
 				39718F182443F3F0002CEE3C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		525E227A2454F647006C0711 /* Build configuration list for PBXNativeTarget "STUCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525E22762454F647006C0711 /* Debug */,
+				525E22772454F647006C0711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		525E227B2454F647006C0711 /* Build configuration list for PBXNativeTarget "STUCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				525E22782454F647006C0711 /* Debug */,
+				525E22792454F647006C0711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
