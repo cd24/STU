@@ -21,9 +21,12 @@
 		525E226E2454F647006C0711 /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
 		525E22732454F647006C0711 /* STUCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E22722454F647006C0711 /* STUCoreTests.swift */; };
 		525E22752454F647006C0711 /* STUCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 525E22672454F647006C0711 /* STUCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		525E227E2454F83D006C0711 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E227D2454F83D006C0711 /* Entity.swift */; };
+		525E227E2454F83D006C0711 /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E227D2454F83D006C0711 /* ModelProtocols.swift */; };
 		52C4A8442454FF89000CDA6B /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
 		52C4A8452454FF89000CDA6B /* STUCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52C4A84B2456351A000CDA6B /* GraphVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84A2456351A000CDA6B /* GraphVertex.swift */; };
+		52C4A84D245635F3000CDA6B /* GraphEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84C245635F3000CDA6B /* GraphEdges.swift */; };
+		52C4A84F24563933000CDA6B /* GraphProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84E24563933000CDA6B /* GraphProtocols.swift */; };
 		8A09E8DEF66C73355EB1EE19 /* Pods_STUBase_STUTestBase_STUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EC04306C4DB6567C3E13C4 /* Pods_STUBase_STUTestBase_STUUITests.framework */; };
 		D2872EBD1E8B452FB16F6F54 /* Pods_STUCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E911475EFC5CED2D9AA7F2 /* Pods_STUCoreTests.framework */; };
 		EB989DE7C3ED9B299DAEAAC5 /* Pods_STUBase_STU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3DABC6E80483007FA6776C /* Pods_STUBase_STU.framework */; };
@@ -98,7 +101,10 @@
 		525E226D2454F647006C0711 /* STUCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STUCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		525E22722454F647006C0711 /* STUCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUCoreTests.swift; sourceTree = "<group>"; };
 		525E22742454F647006C0711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		525E227D2454F83D006C0711 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		525E227D2454F83D006C0711 /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
+		52C4A84A2456351A000CDA6B /* GraphVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVertex.swift; sourceTree = "<group>"; };
+		52C4A84C245635F3000CDA6B /* GraphEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphEdges.swift; sourceTree = "<group>"; };
+		52C4A84E24563933000CDA6B /* GraphProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphProtocols.swift; sourceTree = "<group>"; };
 		53BBD709F7E5B342D5BB41B4 /* Pods-STUCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64B2302DE3561AA64A411F3C /* Pods-STUBase-STUCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STUCore.release.xcconfig"; path = "Target Support Files/Pods-STUBase-STUCore/Pods-STUBase-STUCore.release.xcconfig"; sourceTree = "<group>"; };
 		66641F50F8B3294573727345 /* Pods-STUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUTests.release.xcconfig"; path = "Target Support Files/Pods-STUTests/Pods-STUTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,9 +257,10 @@
 		525E22662454F647006C0711 /* STUCore */ = {
 			isa = PBXGroup;
 			children = (
+				52C4A8492456350F000CDA6B /* Graph */,
 				525E22672454F647006C0711 /* STUCore.h */,
 				525E22682454F647006C0711 /* Info.plist */,
-				525E227D2454F83D006C0711 /* Entity.swift */,
+				525E227D2454F83D006C0711 /* ModelProtocols.swift */,
 			);
 			path = STUCore;
 			sourceTree = "<group>";
@@ -265,6 +272,16 @@
 				525E22742454F647006C0711 /* Info.plist */,
 			);
 			path = STUCoreTests;
+			sourceTree = "<group>";
+		};
+		52C4A8492456350F000CDA6B /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				52C4A84E24563933000CDA6B /* GraphProtocols.swift */,
+				52C4A84A2456351A000CDA6B /* GraphVertex.swift */,
+				52C4A84C245635F3000CDA6B /* GraphEdges.swift */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 		94718E57ED88D59916CC3F87 /* Frameworks */ = {
@@ -645,7 +662,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525E227E2454F83D006C0711 /* Entity.swift in Sources */,
+				525E227E2454F83D006C0711 /* ModelProtocols.swift in Sources */,
+				52C4A84B2456351A000CDA6B /* GraphVertex.swift in Sources */,
+				52C4A84D245635F3000CDA6B /* GraphEdges.swift in Sources */,
+				52C4A84F24563933000CDA6B /* GraphProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
