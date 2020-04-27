@@ -95,3 +95,41 @@ extension Array where Element: Hashable {
         return Set(self)
     }
 }
+
+// MARK: - KeyPaths
+
+infix operator |||: MultiplicationPrecedence
+infix operator &&&: MultiplicationPrecedence
+extension KeyPath where Value: Equatable {
+    public static func |||(lhs: KeyPath<Root, Value>, rhs: KeyPath<Root, Value>) -> (Root) -> (Value) -> Bool {
+        { root in { value in root[keyPath: lhs] == value || root[keyPath: rhs] == value } }
+    }
+    
+    public static func |||(lhs: @escaping (Root) -> (Value) -> Bool, rhs: KeyPath<Root, Value>) -> (Root) -> (Value) -> Bool {
+        { root in { value in lhs(root)(value) || root[keyPath: rhs] == value } }
+    }
+    
+    public static func &&&(lhs: KeyPath<Root, Value>, rhs: KeyPath<Root, Value>) -> (Root) -> (Value) -> Bool {
+        { root in { value in root[keyPath: lhs] == value && root[keyPath: rhs] == value } }
+    }
+    
+    public static func &&&(lhs: @escaping (Root) -> (Value) -> Bool, rhs: KeyPath<Root, Value>) -> (Root) -> (Value) -> Bool {
+        { root in { value in lhs(root)(value) && root[keyPath: rhs] == value } }
+    }
+    
+    public static func ==(lhs: KeyPath<Root, Value>, rhs: Value) -> (Root) -> Bool {
+        return { root in root[keyPath: lhs] == rhs }
+    }
+
+    public static func !=(lhs: KeyPath<Root, Value>, rhs: Value) -> (Root) -> Bool  {
+        return { root in root[keyPath: lhs] != rhs }
+    }
+}
+
+public func ==<A, T>(lhs: @escaping (A) -> (T) -> Bool, rhs: T) -> (A) -> Bool {
+    return { inp in lhs(inp)(rhs) }
+}
+
+public func !=<A, T>(lhs: @escaping (A) -> (T) -> Bool, rhs: T) -> (A) -> Bool {
+    return { inp in !lhs(inp)(rhs) }
+}

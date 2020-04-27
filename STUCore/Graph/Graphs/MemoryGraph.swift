@@ -90,8 +90,6 @@ public struct MemoryUndirectedGraph<Element: Hashable, EdgeLabel: Hashable & Uni
     }
     
     public func edges(from vertex: MemoryUndirectedVertex<Element>) -> [MemoryUndirectedEdge<Element, EdgeLabel>] {
-        return self.edgeSet.filter { edge in
-            edge.source == vertex || edge.destination == vertex
-        }
+        edgeSet.filter(\.source ||| \.destination == vertex)
     }
 }
