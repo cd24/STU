@@ -8,14 +8,6 @@
 
 import Foundation
 
-public struct GraphVertex<T: Hashable>: Vertex, Hashable, Equatable {
-    public var value: T
-    
-    public init(value: T) {
-        self.value = value
-    }
-}
-
 public struct WeightedVertex<V: Vertex>: Vertex, Weighted {
     public typealias Value = V.Value
     private var wrapped: V

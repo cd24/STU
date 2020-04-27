@@ -18,16 +18,20 @@
 		39718F012443F3F0002CEE3C /* STUTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39718F002443F3F0002CEE3C /* STUTests.swift */; };
 		39718F0C2443F3F0002CEE3C /* STUUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39718F0B2443F3F0002CEE3C /* STUUITests.swift */; };
 		3DC6984EA3FB54923F7BD0F7 /* Pods_STUBase_STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8643BD43DE30DAFCA0237AA /* Pods_STUBase_STUCore.framework */; };
+		4A06309CBFAD34791003CA89 /* Pods_STUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426B657414B653E2C4C6AEB4 /* Pods_STUUITests.framework */; };
 		525E226E2454F647006C0711 /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
-		525E22732454F647006C0711 /* STUCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E22722454F647006C0711 /* STUCoreTests.swift */; };
 		525E22752454F647006C0711 /* STUCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 525E22672454F647006C0711 /* STUCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		525E227E2454F83D006C0711 /* ModelProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E227D2454F83D006C0711 /* ModelProtocols.swift */; };
 		52C4A8442454FF89000CDA6B /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
 		52C4A8452454FF89000CDA6B /* STUCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		52C4A84B2456351A000CDA6B /* GraphVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84A2456351A000CDA6B /* GraphVertex.swift */; };
-		52C4A84D245635F3000CDA6B /* GraphEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84C245635F3000CDA6B /* GraphEdges.swift */; };
+		52C4A84B2456351A000CDA6B /* WeightedVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84A2456351A000CDA6B /* WeightedVertex.swift */; };
+		52C4A84D245635F3000CDA6B /* ValueEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84C245635F3000CDA6B /* ValueEdge.swift */; };
 		52C4A84F24563933000CDA6B /* GraphProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84E24563933000CDA6B /* GraphProtocols.swift */; };
-		8A09E8DEF66C73355EB1EE19 /* Pods_STUBase_STUTestBase_STUUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EC04306C4DB6567C3E13C4 /* Pods_STUBase_STUTestBase_STUUITests.framework */; };
+		52C4A85124563BF3000CDA6B /* MemoryGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A85024563BF3000CDA6B /* MemoryGraph.swift */; };
+		52FF0C2F245685C90037F3B2 /* CacheGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF0C2E245685C90037F3B2 /* CacheGraph.swift */; };
+		52FF0C31245688FB0037F3B2 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF0C30245688FB0037F3B2 /* Functional.swift */; };
+		52FF0C33245690480037F3B2 /* MemoryGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF0C32245690480037F3B2 /* MemoryGraphTests.swift */; };
+		52FF0C3724569B150037F3B2 /* CacheGraphSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF0C3624569B150037F3B2 /* CacheGraphSpec.swift */; };
 		D2872EBD1E8B452FB16F6F54 /* Pods_STUCoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2E911475EFC5CED2D9AA7F2 /* Pods_STUCoreTests.framework */; };
 		EB989DE7C3ED9B299DAEAAC5 /* Pods_STUBase_STU.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D3DABC6E80483007FA6776C /* Pods_STUBase_STU.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +83,8 @@
 
 /* Begin PBXFileReference section */
 		0D3DABC6E80483007FA6776C /* Pods_STUBase_STU.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUBase_STU.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1626C7366639D4A4370A35BD /* Pods-STUBase-STU-STUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STU-STUUITests.debug.xcconfig"; path = "Target Support Files/Pods-STUBase-STU-STUUITests/Pods-STUBase-STU-STUUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1B48E20146FB5E5271563861 /* Pods-STUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUUITests.release.xcconfig"; path = "Target Support Files/Pods-STUUITests/Pods-STUUITests.release.xcconfig"; sourceTree = "<group>"; };
 		39718EE32443F3DD002CEE3C /* STU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39718EE62443F3DD002CEE3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39718EE82443F3DD002CEE3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,22 +100,28 @@
 		39718F072443F3F0002CEE3C /* STUUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STUUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		39718F0B2443F3F0002CEE3C /* STUUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUUITests.swift; sourceTree = "<group>"; };
 		39718F0D2443F3F0002CEE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		426B657414B653E2C4C6AEB4 /* Pods_STUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		491F7E498901D22C11D5C298 /* Pods-STUBase-STU-STUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STU-STUUITests.release.xcconfig"; path = "Target Support Files/Pods-STUBase-STU-STUUITests/Pods-STUBase-STU-STUUITests.release.xcconfig"; sourceTree = "<group>"; };
 		51CA41D3D299F854D504BC1D /* Pods-STUBase-STU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STU.debug.xcconfig"; path = "Target Support Files/Pods-STUBase-STU/Pods-STUBase-STU.debug.xcconfig"; sourceTree = "<group>"; };
 		525E22652454F647006C0711 /* STUCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STUCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		525E22672454F647006C0711 /* STUCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STUCore.h; sourceTree = "<group>"; };
 		525E22682454F647006C0711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525E226D2454F647006C0711 /* STUCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STUCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		525E22722454F647006C0711 /* STUCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STUCoreTests.swift; sourceTree = "<group>"; };
 		525E22742454F647006C0711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		525E227D2454F83D006C0711 /* ModelProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelProtocols.swift; sourceTree = "<group>"; };
-		52C4A84A2456351A000CDA6B /* GraphVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphVertex.swift; sourceTree = "<group>"; };
-		52C4A84C245635F3000CDA6B /* GraphEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphEdges.swift; sourceTree = "<group>"; };
+		52C4A84A2456351A000CDA6B /* WeightedVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedVertex.swift; sourceTree = "<group>"; };
+		52C4A84C245635F3000CDA6B /* ValueEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEdge.swift; sourceTree = "<group>"; };
 		52C4A84E24563933000CDA6B /* GraphProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphProtocols.swift; sourceTree = "<group>"; };
+		52C4A85024563BF3000CDA6B /* MemoryGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGraph.swift; sourceTree = "<group>"; };
+		52FF0C2E245685C90037F3B2 /* CacheGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheGraph.swift; sourceTree = "<group>"; };
+		52FF0C30245688FB0037F3B2 /* Functional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functional.swift; sourceTree = "<group>"; };
+		52FF0C32245690480037F3B2 /* MemoryGraphTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGraphTests.swift; sourceTree = "<group>"; };
+		52FF0C3624569B150037F3B2 /* CacheGraphSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheGraphSpec.swift; sourceTree = "<group>"; };
 		53BBD709F7E5B342D5BB41B4 /* Pods-STUCoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUCoreTests.debug.xcconfig"; path = "Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests.debug.xcconfig"; sourceTree = "<group>"; };
 		64B2302DE3561AA64A411F3C /* Pods-STUBase-STUCore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STUCore.release.xcconfig"; path = "Target Support Files/Pods-STUBase-STUCore/Pods-STUBase-STUCore.release.xcconfig"; sourceTree = "<group>"; };
 		66641F50F8B3294573727345 /* Pods-STUTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUTests.release.xcconfig"; path = "Target Support Files/Pods-STUTests/Pods-STUTests.release.xcconfig"; sourceTree = "<group>"; };
 		715AAC0A7AC6E2D904CE4984 /* Pods-STUTestBase-STUUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUTestBase-STUUITests.release.xcconfig"; path = "Target Support Files/Pods-STUTestBase-STUUITests/Pods-STUTestBase-STUUITests.release.xcconfig"; sourceTree = "<group>"; };
-		83EC04306C4DB6567C3E13C4 /* Pods_STUBase_STUTestBase_STUUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STUBase_STUTestBase_STUUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75302CE8652CA09C090C27B9 /* Pods-STUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUUITests.debug.xcconfig"; path = "Target Support Files/Pods-STUUITests/Pods-STUUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8C520FF180F294437824EB31 /* Pods-STUCoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUCoreTests.release.xcconfig"; path = "Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2A120A50C9883851764917F /* Pods-STUBase-STU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUBase-STU.release.xcconfig"; path = "Target Support Files/Pods-STUBase-STU/Pods-STUBase-STU.release.xcconfig"; sourceTree = "<group>"; };
 		A795B5DFF5A71CC23054DEE5 /* Pods-STUTestBase-STUUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STUTestBase-STUUITests.debug.xcconfig"; path = "Target Support Files/Pods-STUTestBase-STUUITests/Pods-STUTestBase-STUUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +156,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A09E8DEF66C73355EB1EE19 /* Pods_STUBase_STUTestBase_STUUITests.framework in Frameworks */,
+				4A06309CBFAD34791003CA89 /* Pods_STUUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +262,10 @@
 				66641F50F8B3294573727345 /* Pods-STUTests.release.xcconfig */,
 				C778A17C754FBEAFB4F3BC3A /* Pods-STUBase-STUTestBase-STUUITests.debug.xcconfig */,
 				CDF2F1047684DCBDEEF8251F /* Pods-STUBase-STUTestBase-STUUITests.release.xcconfig */,
+				1626C7366639D4A4370A35BD /* Pods-STUBase-STU-STUUITests.debug.xcconfig */,
+				491F7E498901D22C11D5C298 /* Pods-STUBase-STU-STUUITests.release.xcconfig */,
+				75302CE8652CA09C090C27B9 /* Pods-STUUITests.debug.xcconfig */,
+				1B48E20146FB5E5271563861 /* Pods-STUUITests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -257,6 +273,7 @@
 		525E22662454F647006C0711 /* STUCore */ = {
 			isa = PBXGroup;
 			children = (
+				52FF0C30245688FB0037F3B2 /* Functional.swift */,
 				52C4A8492456350F000CDA6B /* Graph */,
 				525E22672454F647006C0711 /* STUCore.h */,
 				525E22682454F647006C0711 /* Info.plist */,
@@ -268,8 +285,9 @@
 		525E22712454F647006C0711 /* STUCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				525E22722454F647006C0711 /* STUCoreTests.swift */,
 				525E22742454F647006C0711 /* Info.plist */,
+				52FF0C32245690480037F3B2 /* MemoryGraphTests.swift */,
+				52FF0C3624569B150037F3B2 /* CacheGraphSpec.swift */,
 			);
 			path = STUCoreTests;
 			sourceTree = "<group>";
@@ -277,11 +295,21 @@
 		52C4A8492456350F000CDA6B /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				52C4A85224563BF6000CDA6B /* Graphs */,
 				52C4A84E24563933000CDA6B /* GraphProtocols.swift */,
-				52C4A84A2456351A000CDA6B /* GraphVertex.swift */,
-				52C4A84C245635F3000CDA6B /* GraphEdges.swift */,
+				52C4A84A2456351A000CDA6B /* WeightedVertex.swift */,
+				52C4A84C245635F3000CDA6B /* ValueEdge.swift */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		52C4A85224563BF6000CDA6B /* Graphs */ = {
+			isa = PBXGroup;
+			children = (
+				52C4A85024563BF3000CDA6B /* MemoryGraph.swift */,
+				52FF0C2E245685C90037F3B2 /* CacheGraph.swift */,
+			);
+			path = Graphs;
 			sourceTree = "<group>";
 		};
 		94718E57ED88D59916CC3F87 /* Frameworks */ = {
@@ -291,7 +319,7 @@
 				D8643BD43DE30DAFCA0237AA /* Pods_STUBase_STUCore.framework */,
 				E2E911475EFC5CED2D9AA7F2 /* Pods_STUCoreTests.framework */,
 				AB209E5D5F46D74BF97DD9AE /* Pods_STUTests.framework */,
-				83EC04306C4DB6567C3E13C4 /* Pods_STUBase_STUTestBase_STUUITests.framework */,
+				426B657414B653E2C4C6AEB4 /* Pods_STUUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,6 +366,7 @@
 				39718EF82443F3F0002CEE3C /* Sources */,
 				39718EF92443F3F0002CEE3C /* Frameworks */,
 				39718EFA2443F3F0002CEE3C /* Resources */,
+				3E9E611D5F73E8814CF6FBD2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,6 +425,7 @@
 				525E22692454F647006C0711 /* Sources */,
 				525E226A2454F647006C0711 /* Frameworks */,
 				525E226B2454F647006C0711 /* Resources */,
+				CBEE45A203B92DD038FBF467 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -507,15 +537,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-STUBase-STUTestBase-STUUITests/Pods-STUBase-STUTestBase-STUUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-STUUITests/Pods-STUUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-STUBase-STUTestBase-STUUITests/Pods-STUBase-STUTestBase-STUUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-STUUITests/Pods-STUUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STUBase-STUTestBase-STUUITests/Pods-STUBase-STUTestBase-STUUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STUUITests/Pods-STUUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		28F101455E64B160BC73CCC4 /* [CP] Check Pods Manifest.lock */ = {
@@ -562,6 +592,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		3E9E611D5F73E8814CF6FBD2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STUTests/Pods-STUTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STUTests/Pods-STUTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STUTests/Pods-STUTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6D19717B40D86171350C2206 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -577,7 +624,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-STUBase-STUTestBase-STUUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-STUUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -604,6 +651,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBEE45A203B92DD038FBF467 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-STUCoreTests/Pods-STUCoreTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2B688962FB0E61A788604A6 /* [CP] Check Pods Manifest.lock */ = {
@@ -663,8 +727,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				525E227E2454F83D006C0711 /* ModelProtocols.swift in Sources */,
-				52C4A84B2456351A000CDA6B /* GraphVertex.swift in Sources */,
-				52C4A84D245635F3000CDA6B /* GraphEdges.swift in Sources */,
+				52FF0C31245688FB0037F3B2 /* Functional.swift in Sources */,
+				52FF0C2F245685C90037F3B2 /* CacheGraph.swift in Sources */,
+				52C4A84B2456351A000CDA6B /* WeightedVertex.swift in Sources */,
+				52C4A84D245635F3000CDA6B /* ValueEdge.swift in Sources */,
+				52C4A85124563BF3000CDA6B /* MemoryGraph.swift in Sources */,
 				52C4A84F24563933000CDA6B /* GraphProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,7 +740,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				525E22732454F647006C0711 /* STUCoreTests.swift in Sources */,
+				52FF0C3724569B150037F3B2 /* CacheGraphSpec.swift in Sources */,
+				52FF0C33245690480037F3B2 /* MemoryGraphTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -920,7 +988,7 @@
 		};
 		39718F172443F3F0002CEE3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C778A17C754FBEAFB4F3BC3A /* Pods-STUBase-STUTestBase-STUUITests.debug.xcconfig */;
+			baseConfigurationReference = 75302CE8652CA09C090C27B9 /* Pods-STUUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -941,7 +1009,7 @@
 		};
 		39718F182443F3F0002CEE3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDF2F1047684DCBDEEF8251F /* Pods-STUBase-STUTestBase-STUUITests.release.xcconfig */;
+			baseConfigurationReference = 1B48E20146FB5E5271563861 /* Pods-STUUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -985,7 +1053,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator iphoneos macosx iphonesimulator appletvos watchos watchsimulator";
-				SUPPORTS_TEXT_BASED_API = YES;
+				SUPPORTS_TEXT_BASED_API = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TAPI_VERIFY_MODE = Pedantic;
@@ -1021,7 +1089,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "appletvsimulator iphoneos macosx iphonesimulator appletvos watchos watchsimulator";
-				SUPPORTS_TEXT_BASED_API = YES;
+				SUPPORTS_TEXT_BASED_API = NO;
 				SWIFT_VERSION = 5.0;
 				TAPI_VERIFY_MODE = Pedantic;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1046,6 +1114,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos appletvsimulator appletvos watchsimulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1067,6 +1136,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mcavey.STUCoreTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx watchos appletvsimulator appletvos watchsimulator";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
