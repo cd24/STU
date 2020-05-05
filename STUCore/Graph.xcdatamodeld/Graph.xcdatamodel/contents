@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="CoreDataEdge" representedClassName=".CoreDataEdge" parentEntity="CoreDataIdentifiableObject" syncable="YES" codeGenerationType="class">
+        <relationship name="cdDestination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataValue" inverseName="edgeDestination" inverseEntity="CoreDataValue"/>
+        <relationship name="cdLabel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataValue" inverseName="edge" inverseEntity="CoreDataValue"/>
+        <relationship name="cdSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataValue" inverseName="edgeSource" inverseEntity="CoreDataValue"/>
+    </entity>
+    <entity name="CoreDataIdentifiableObject" representedClassName=".CoreDataIdentifiableObject" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="cdIdentifier" attributeType="String" defaultValueString="UNSET"/>
+    </entity>
+    <entity name="CoreDataValue" representedClassName=".CoreDataValue" parentEntity="CoreDataIdentifiableObject" syncable="YES" codeGenerationType="class">
+        <attribute name="cdData" optional="YES" attributeType="Binary"/>
+        <relationship name="edge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdLabel" inverseEntity="CoreDataEdge"/>
+        <relationship name="edgeDestination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdDestination" inverseEntity="CoreDataEdge"/>
+        <relationship name="edgeSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdSource" inverseEntity="CoreDataEdge"/>
+    </entity>
+    <elements>
+        <element name="CoreDataIdentifiableObject" positionX="-93.10546875" positionY="-9.265625" width="128" height="58"/>
+        <element name="CoreDataValue" positionX="-166.2734375" positionY="155.58203125" width="128" height="103"/>
+        <element name="CoreDataEdge" positionX="87.26171875" positionY="110.015625" width="128" height="88"/>
+    </elements>
+</model>

@@ -32,11 +32,11 @@ public class CacheGraph<Wrapped: Graph>: Graph where Wrapped.VertexKind: Hashabl
     }
     
     public func edges(from vertex: Wrapped.VertexKind) -> [Wrapped.EdgeType] {
-        if let cachedValue = self.fetchCache[vertex] {
+        if let cachedValue = fetchCache[vertex] {
             return cachedValue
         }
-        let edges = self.wrapped.edges(from: vertex)
-        self.fetchCache[vertex] = edges
+        let edges = wrapped.edges(from: vertex)
+        fetchCache[vertex] = edges
         return edges
     }
     
