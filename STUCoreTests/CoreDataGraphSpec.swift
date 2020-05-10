@@ -29,9 +29,9 @@ public class CoreDataGraphSpec: QuickSpec {
         return container
     }()
     
-    var graph: StoredGraph<String, String, CoreDataUndirectedGraphDatabase> {
+    lazy var graph: StoredGraph<String, String, CoreDataUndirectedGraphDatabase> = {
         StoredGraph(database: CoreDataUndirectedGraphDatabase(context: self.testContainer.viewContext))
-    }
+    }()
     
     public func all<T: NSManagedObject>(name: String) -> [T] {
         let fetch = NSFetchRequest<T>(entityName: name)
@@ -40,16 +40,17 @@ public class CoreDataGraphSpec: QuickSpec {
     
     public func values() -> [CoreDataValue] { self.all(name: "CoreDataValue") }
     public func edges() -> [CoreDataEdge] { self.all(name: "CoreDataEdge") }
+    public func resetDatabase() {
+        for value in self.values() {
+            self.testContainer.viewContext.delete(value)
+        }
+        for edge in self.edges() {
+            self.testContainer.viewContext.delete(edge)
+        }
+    }
     
     public override func spec() {
-        beforeEach {
-            for value in self.values() {
-                self.testContainer.viewContext.delete(value)
-            }
-            for edge in self.edges() {
-                self.testContainer.viewContext.delete(edge)
-            }
-        }
+        beforeEach { self.resetDatabase() }
         describe("Vertexs") {
             it("adds new vertexs to the data model") {
                 let vertex = self.graph.new(vertex: "first")
@@ -78,10 +79,20 @@ public class CoreDataGraphSpec: QuickSpec {
                 expect(edge.source.data.identifier).to(equal(v1!.data.identifier))
                 expect(edge.destination.data.identifier).to(equal(v2!.data.identifier))
             }
-            it("Looks up edges") {
+            it("Looks up single edges") {
                 let edge = self.graph.add(from: v1!, to: v2!)
                 let foundEdges = self.graph.edges(from: v1!)
                 expect(foundEdges.map { $0.data.identifier }).to(contain(edge.data.identifier))
+            }
+            it("Looks up multiple edges") {
+                let v3 = self.graph.new(vertex: "Third")
+                let edge = self.graph.add(from: v1!, to: v2!)
+                let edge2 = self.graph.add(from: v1!, to: v3)
+                let foundEdges = self.graph.edges(from: v1!)
+                expect(foundEdges.map { $0.data.identifier }.set).to(equal([
+                    edge.data.identifier,
+                    edge2.data.identifier
+                ]))
             }
         }
     }

@@ -10,9 +10,9 @@
     </entity>
     <entity name="CoreDataValue" representedClassName=".CoreDataValue" parentEntity="CoreDataIdentifiableObject" syncable="YES" codeGenerationType="class">
         <attribute name="cdData" optional="YES" attributeType="Binary"/>
-        <relationship name="edge" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdLabel" inverseEntity="CoreDataEdge"/>
-        <relationship name="edgeDestination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdDestination" inverseEntity="CoreDataEdge"/>
-        <relationship name="edgeSource" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdSource" inverseEntity="CoreDataEdge"/>
+        <relationship name="edge" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdLabel" inverseEntity="CoreDataEdge"/>
+        <relationship name="edgeDestination" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdDestination" inverseEntity="CoreDataEdge"/>
+        <relationship name="edgeSource" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreDataEdge" inverseName="cdSource" inverseEntity="CoreDataEdge"/>
     </entity>
     <elements>
         <element name="CoreDataIdentifiableObject" positionX="-93.10546875" positionY="-9.265625" width="128" height="58"/>

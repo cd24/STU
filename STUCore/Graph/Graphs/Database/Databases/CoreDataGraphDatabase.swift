@@ -70,7 +70,7 @@ public struct CoreDataUndirectedGraphDatabase: GraphDatabase {
     
     public func edges(from: CoreDataValue) -> [CoreDataEdge] {
         let fr: NSFetchRequest<CoreDataEdge> = CoreDataEdge.fetchRequest()
-        fr.predicate = NSPredicate(format: "cdSource.cdIdentifier == '%@' OR cdDestination.cdIdentifier == '%@'", from.identifier, from.identifier)
+        fr.predicate = NSPredicate(format: "cdSource == %@ OR cdDestination == %@", from, from)
         do {
             return try self.context.fetch(fr)
         } catch {
