@@ -87,6 +87,9 @@ public class StoredGraph<Label: Codable & Equatable, Element: Codable & Equatabl
     }
     
     public func new(vertex: Element) -> StoredVertex<Element> {
+        if let vertex = self.existingVertex(value: vertex) {
+            return vertex
+        }
         var entry = database.newVertex()
         entry.identifier = UUID().uuidString
         entry.data = try! databaseEncoder.encode(vertex)
@@ -95,6 +98,9 @@ public class StoredGraph<Label: Codable & Equatable, Element: Codable & Equatabl
     }
     
     public func add(from source: StoredVertex<Element>, to destination: StoredVertex<Element>) -> StoredEdge<Label, Element, Database.EdgeKind> {
+        if let edge = self.existingEdge(from: source, to: destination) {
+            return edge
+        }
         var edge = database.newEdge()
         edge.identifier = UUID().uuidString
         edge.source = source.data as! Database.ValueKind
@@ -106,5 +112,13 @@ public class StoredGraph<Label: Codable & Equatable, Element: Codable & Equatabl
     
     public func edges(from vertex: StoredVertex<Element>) -> [StoredEdge<Label, Element, Database.EdgeKind>] {
         self.database.edges(from: vertex.data as! Database.ValueKind).map(StoredEdge.init)
+    }
+    
+    private func existingEdge(from source: StoredVertex<Element>, to destination: StoredVertex<Element>) -> StoredEdge<Label, Element, Database.EdgeKind>? {
+        return self.edges(from: source).filter { [$0.source, $0.destination].set == [source, destination].set }.first
+    }
+    
+    private func existingVertex(value: Element) -> StoredVertex<Element>? {
+        return self.verticies.filter { $0.value == value }.first
     }
 }
