@@ -9,13 +9,14 @@
 import Foundation
 import Quick
 import Nimble
+import STUCore
 
 public class CacheGraphSpec: QuickSpec {
+    var graph: CacheGraph<MemoryUndirectedGraph<String, String>> = CacheGraph(wrapping: MemoryUndirectedGraph())
     public override func spec() {
-        describe("TODO:") {
-            it("Needs to be written eventually") {
-                expect(1).to(equal(2))
-            }
+        beforeEach {
+            self.graph = CacheGraph(wrapping: MemoryUndirectedGraph())
         }
+        itBehavesLike(AGraph.self) { self.graph }
     }
 }

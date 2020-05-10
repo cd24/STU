@@ -36,3 +36,30 @@ public protocol GraphDatabase {
     
     func commit() throws
 }
+
+extension IdentifiedObject {
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+}
+
+extension IdentifiedObject {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.identifier)
+    }
+}
+
+extension DatabaseValue {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.identifier)
+        hasher.combine(self.data)
+    }
+}
+
+extension DatabaseEdge where ValueKind: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.identifier)
+        hasher.combine(self.source)
+        hasher.combine(self.destination)
+    }
+}

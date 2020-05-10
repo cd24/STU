@@ -55,3 +55,9 @@ extension Vertex where Value: Equatable {
         return lhs.value == rhs.value
     }
 }
+
+extension Graph where EdgeType: Hashable {
+    public var edges: Set<EdgeType> {
+        return self.verticies.flatMap { self.edges(from: $0) }.set
+    }
+}

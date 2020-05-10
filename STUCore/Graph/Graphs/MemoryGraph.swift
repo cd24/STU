@@ -14,9 +14,16 @@ public struct Nothing: Unit, Hashable {
 
 public struct MemoryUndirectedVertex<T: Hashable>: Vertex, Valued, Hashable, Equatable {
     public var value: T
+    public var identifier: UUID
     
-    public init(value: T) {
+    public init(value: T, identifier: UUID = UUID()) {
         self.value = value
+        self.identifier = identifier
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.value)
+        hasher.combine(self.identifier.uuidString)
     }
 }
 
@@ -25,15 +32,18 @@ public struct MemoryUndirectedEdge<T: Hashable, Label>: Edge, Valued {
     public var source: MemoryUndirectedVertex<T>
     public var destination: MemoryUndirectedVertex<T>
     public var label: Label
+    public var identifier: UUID
+    
     public var value: Label {
         get { self.label }
         set { self.label = newValue }
     }
     
-    public init(source: MemoryUndirectedVertex<T>, destination: MemoryUndirectedVertex<T>, label: Label) {
+    public init(source: MemoryUndirectedVertex<T>, destination: MemoryUndirectedVertex<T>, label: Label, identifier: UUID = UUID()) {
         self.source = source
         self.destination = destination
         self.label = label
+        self.identifier = identifier
     }
 }
 

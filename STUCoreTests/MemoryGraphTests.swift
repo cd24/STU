@@ -18,6 +18,8 @@ public class MemoryUndirectedGraphSpec: QuickSpec {
         beforeEach {
             self.graph = MemoryUndirectedGraph<Int, String>()
         }
+        
+        itBehavesLike(AGraph.self) { MemoryUndirectedGraph<String, String>() }
         describe("Adding verticies") {
             it("adds a single vertex") {
                 expect(self.graph.new(vertex: 2)).to(equal(MemoryUndirectedVertex(value: 2)))
@@ -25,13 +27,10 @@ public class MemoryUndirectedGraphSpec: QuickSpec {
             }
             it("adds multiple verticies") {
                 let values = [1, 2, 3, 4, 5]
-                var expected = Set<MemoryUndirectedVertex<Int>>()
                 values.forEach { value in
-                    let answer = MemoryUndirectedVertex(value: value)
-                    expected.insert(answer)
-                    expect(self.graph.new(vertex: value)).to(equal(answer))
-                    expect(self.graph.verticies.set).to(equal(expected))
+                    _ = self.graph.new(vertex: value)
                 }
+                expect(self.graph.verticies.map { $0.value }.set).to(equal(values.set))
             }
         }
         describe("Adding edges") {

@@ -11,7 +11,7 @@ import Foundation
 public let databaseEncoder = JSONEncoder()
 public let databaseDecoder = JSONDecoder()
 
-public class StoredVertex<Value: Codable & Equatable>: Vertex {
+public class StoredVertex<Value: Codable & Equatable>: Vertex, Hashable {
     var data: DatabaseValue
     
     public init(data: DatabaseValue) {
@@ -26,9 +26,17 @@ public class StoredVertex<Value: Codable & Equatable>: Vertex {
             data.data = try! databaseEncoder.encode(newValue)
         }
     }
+    
+    public func hash(into hasher: inout Hasher) {
+        self.data.hash(into: &hasher)
+    }
 }
 
-public class StoredEdge<Label: Codable & Equatable, Element: Codable & Equatable, EdgeKind: DatabaseEdge>: Edge {
+public class StoredEdge<Label: Codable & Equatable, Element: Codable & Equatable, EdgeKind: DatabaseEdge>: Edge, Equatable {
+    public static func == (lhs: StoredEdge<Label, Element, EdgeKind>, rhs: StoredEdge<Label, Element, EdgeKind>) -> Bool {
+        return lhs.data == rhs.data
+    }
+    
     public typealias VertexKind = StoredVertex<Element>
     
     var data: EdgeKind
@@ -54,6 +62,12 @@ public class StoredEdge<Label: Codable & Equatable, Element: Codable & Equatable
         set {
             data.label?.data = try! databaseEncoder.encode(newValue)
         }
+    }
+}
+
+extension StoredEdge: Hashable where EdgeKind: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.data)
     }
 }
 

@@ -21,6 +21,7 @@ extension CoreDataValue: DatabaseValue {
         set { self.cdIdentifier = newValue }
     }
 }
+
 extension CoreDataEdge: DatabaseEdge {
     public typealias ValueKind = CoreDataValue
     
