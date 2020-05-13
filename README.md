@@ -1,6 +1,8 @@
 # STU
 Smarter Than U is a research application for defining relationships between information
 
+This project uses TravisCI for our CI support
+
 # Setup
 
 Ensure you've got the following installed: 
