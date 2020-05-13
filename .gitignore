@@ -92,3 +92,4 @@ iOSInjectionProject/
 Podfile.lock
 Pods/Manifest.lock
 *.swp
+Gemfile.lock
