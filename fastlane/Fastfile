@@ -12,6 +12,7 @@
 
 # Uncomment the line if you want fastlane to automatically update itself
 update_fastlane
+setup_travis
 
 default_platform(:ios)
 
@@ -29,6 +30,5 @@ platform :ios do
     cocoapods(clean_install: true)
     wkspc = "STU.xcworkspace"
     scan(workspace: wkspc, scheme: "STU")
-    scan(workspace: wkspc, scheme: "STUCore")
   end
 end
