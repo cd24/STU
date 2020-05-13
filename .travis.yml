@@ -5,3 +5,12 @@ install:
   - bundle install
 script:
   - fastlane ci
+deploy:
+  - provider: script
+  script: fastlane beta
+  on:
+    condition: $TRAVIS_BRANCH = release/*
+  - provider: script
+  script: fastlane deploy
+  on: 
+    branch: master
