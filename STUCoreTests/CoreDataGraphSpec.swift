@@ -9,6 +9,7 @@
 import Foundation
 import Quick
 import Nimble
+import CoreData
 @testable import STUCore
 
 public class CoreDataGraphSpec: QuickSpec {
