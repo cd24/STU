@@ -93,3 +93,6 @@ Podfile.lock
 Pods/Manifest.lock
 *.swp
 Gemfile.lock
+
+.swiftpm
+.swiftpm/*
