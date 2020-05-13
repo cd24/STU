@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "984EAA79-6E38-40BD-826C-C9AF1283958A",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:STU.xcodeproj",
+      "identifier" : "39718EE22443F3DD002CEE3C",
+      "name" : "STU"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:STU.xcodeproj",
+        "identifier" : "39718EFB2443F3F0002CEE3C",
+        "name" : "STUTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:STU.xcodeproj",
+        "identifier" : "39718F062443F3F0002CEE3C",
+        "name" : "STUUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

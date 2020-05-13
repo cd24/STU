@@ -1,5 +1,10 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '13.0'
+platform :ios, '13.0'
+
+def testing_pods
+  pod 'Quick'
+  pod 'Nimble'
+end
 
 abstract_target 'STUBase' do
   use_frameworks!
@@ -8,22 +13,19 @@ abstract_target 'STUBase' do
   target 'STU' do
     target 'STUTests' do
       inherit! :search_paths
-      pod 'Quick'
-      pod 'Nimble'
+      testing_pods
     end
         
     target 'STUUITests' do
       inherit! :search_paths
-      pod 'Quick'
-      pod 'Nimble'
+      testing_pods
     end
   end
     
   target 'STUCore' do
     target 'STUCoreTests' do
       inherit! :search_paths
-      pod 'Quick'
-      pod 'Nimble'
+      testing_pods
     end
   end
 end

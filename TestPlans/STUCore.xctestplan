@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "44D56493-34D6-4047-B97F-35025BE75632",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:STU.xcodeproj",
+        "identifier" : "525E226C2454F647006C0711",
+        "name" : "STUCoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}

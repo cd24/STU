@@ -29,6 +29,7 @@
 		5294B111246121ED00B82B8C /* GraphDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5294B110246121ED00B82B8C /* GraphDatabase.swift */; };
 		5294B1132461237E00B82B8C /* CoreDataGraphDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5294B1122461237E00B82B8C /* CoreDataGraphDatabase.swift */; };
 		5294B1152461280700B82B8C /* StoredGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5294B1142461280700B82B8C /* StoredGraph.swift */; };
+		52B7CFC4246B8F5A002B18D0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5294B0FF245F758400B82B8C /* CoreData.framework */; };
 		52C4A8442454FF89000CDA6B /* STUCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; };
 		52C4A8452454FF89000CDA6B /* STUCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 525E22652454F647006C0711 /* STUCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52C4A84B2456351A000CDA6B /* WeightedVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C4A84A2456351A000CDA6B /* WeightedVertex.swift */; };
@@ -125,6 +126,8 @@
 		5294B110246121ED00B82B8C /* GraphDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphDatabase.swift; sourceTree = "<group>"; };
 		5294B1122461237E00B82B8C /* CoreDataGraphDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataGraphDatabase.swift; sourceTree = "<group>"; };
 		5294B1142461280700B82B8C /* StoredGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredGraph.swift; sourceTree = "<group>"; };
+		52B7CFC2246B8EBE002B18D0 /* STUCore.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = STUCore.xctestplan; path = TestPlans/STUCore.xctestplan; sourceTree = "<group>"; };
+		52B7CFC3246B8ECF002B18D0 /* STU.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = STU.xctestplan; path = TestPlans/STU.xctestplan; sourceTree = "<group>"; };
 		52C4A84A2456351A000CDA6B /* WeightedVertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedVertex.swift; sourceTree = "<group>"; };
 		52C4A84C245635F3000CDA6B /* ValueEdge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueEdge.swift; sourceTree = "<group>"; };
 		52C4A84E24563933000CDA6B /* GraphProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphProtocols.swift; sourceTree = "<group>"; };
@@ -189,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B7CFC4246B8F5A002B18D0 /* CoreData.framework in Frameworks */,
 				525E226E2454F647006C0711 /* STUCore.framework in Frameworks */,
 				D2872EBD1E8B452FB16F6F54 /* Pods_STUCoreTests.framework in Frameworks */,
 			);
@@ -200,6 +204,8 @@
 		39718EDA2443F3DD002CEE3C = {
 			isa = PBXGroup;
 			children = (
+				52B7CFC2246B8EBE002B18D0 /* STUCore.xctestplan */,
+				52B7CFC3246B8ECF002B18D0 /* STU.xctestplan */,
 				39718EE52443F3DD002CEE3C /* STU */,
 				39718EFF2443F3F0002CEE3C /* STUTests */,
 				39718F0A2443F3F0002CEE3C /* STUUITests */,
@@ -956,6 +962,7 @@
 				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = STU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -978,6 +985,7 @@
 				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = STU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -994,7 +1002,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C2C80DC3079BBE5EE0290E09 /* Pods-STUTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VKP38H23M;
@@ -1017,7 +1025,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 66641F50F8B3294573727345 /* Pods-STUTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VKP38H23M;
@@ -1040,7 +1048,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75302CE8652CA09C090C27B9 /* Pods-STUUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VKP38H23M;
 				INFOPLIST_FILE = STUUITests/Info.plist;
@@ -1061,7 +1069,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1B48E20146FB5E5271563861 /* Pods-STUUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6VKP38H23M;
 				INFOPLIST_FILE = STUUITests/Info.plist;
@@ -1152,7 +1160,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53BBD709F7E5B342D5BB41B4 /* Pods-STUCoreTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				INFOPLIST_FILE = STUCoreTests/Info.plist;
@@ -1174,7 +1182,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8C520FF180F294437824EB31 /* Pods-STUCoreTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VPWANFCTRJ;
 				INFOPLIST_FILE = STUCoreTests/Info.plist;
