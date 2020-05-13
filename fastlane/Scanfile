@@ -1,0 +1,4 @@
+devices(["iPhone 8", "iPad Air"])
+
+clean(true)
+
