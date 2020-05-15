@@ -1,5 +1,5 @@
 # Define Entity Model
-Tracking ID: [STU-$NUMBER](https://mcavey.myjetbrains.com/youtrack/issue/STU-$NUMBER)
+Tracking ID: [STU-3](https://mcavey.myjetbrains.com/youtrack/issue/STU-3)
 
 ## Overview
 
